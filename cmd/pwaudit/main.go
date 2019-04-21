@@ -11,6 +11,7 @@ import (
 
 	"github.com/scnewma/pwaudit/pkg/haveibeenpwned"
 	"github.com/scnewma/pwaudit/pkg/pw"
+	"github.com/scnewma/pwaudit/pkg/version"
 )
 
 const (
@@ -18,13 +19,23 @@ const (
 )
 
 func main() {
-	if err := run(); err != nil {
+	args := os.Args[1:]
+
+	// print version
+	for _, arg := range args {
+		if arg == "-v" || arg == "-version" || arg == "--version" {
+			fmt.Println(version.Print())
+			os.Exit(0)
+		}
+	}
+
+	if err := run(args); err != nil {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
 	}
 }
 
-func run() error {
+func run(args []string) error {
 	flags := flag.NewFlagSet(os.Args[0], flag.ExitOnError)
 	flags.Usage = func() {
 		printHelp(os.Stderr)
@@ -33,7 +44,7 @@ func run() error {
 	inputFlags.AddFlags(flags)
 	outputFlags := NewOutputFlags()
 	outputFlags.AddFlags(flags)
-	if err := flags.Parse(os.Args[1:]); err != nil {
+	if err := flags.Parse(args); err != nil {
 		return err
 	}
 
@@ -114,6 +125,10 @@ Output Options:
 
   --show-all                Print both compromised and non-compromised passwords
                             to the screen.
+
+Other Options:
+
+  -v,--version              Print the version.
 
 `
 
