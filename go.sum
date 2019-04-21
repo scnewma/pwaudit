@@ -1,0 +1,10 @@
+github.com/mattn/go-runewidth v0.0.4 h1:2BvfKmzob6Bmd4YsL0zygOqfdFnK7GR4QL06Do4/p7Y=
+github.com/mattn/go-runewidth v0.0.4/go.mod h1:LwmH8dsx7+W8Uxz3IHJYH5QSwggIsqBzpuz5H//U1FU=
+github.com/olekukonko/tablewriter v0.0.1 h1:b3iUnf1v+ppJiOfNX4yxxqfWKMQPZR5yoh8urCTFX88=
+github.com/olekukonko/tablewriter v0.0.1/go.mod h1:vsDQFd/mU46D+Z4whnwzcISnGGzXWMclvtLoiIKAKIo=
+github.com/smartystreets/assertions v0.0.0-20190401211740-f487f9de1cd3 h1:hBSHahWMEgzwRyS6dRpxY0XyjZsHyQ61s084wo5PJe0=
+github.com/smartystreets/assertions v0.0.0-20190401211740-f487f9de1cd3/go.mod h1:OnSkiWE9lh6wB0YB77sQom3nweQdgAjqCqsofrRNTgc=
+github.com/smartystreets/gunit v0.0.0-20180314194857-6f0d6275bdcd h1:p5kvxG4NHogJX1brTLtvUSGdW0/aBvIyqDSW7tmnsmQ=
+github.com/smartystreets/gunit v0.0.0-20180314194857-6f0d6275bdcd/go.mod h1:XUKj4gbqj2QvJk/OdLWzyZ3FYli0f+MdpngyryX0gcw=
+github.com/smartystreets/scanners v0.0.0-20190129000621-6cc41666eb5a h1:9ir/L7OIx5n7/ZHrOwo9Ewsv3rMyRka7LPlbzd4H06s=
+github.com/smartystreets/scanners v0.0.0-20190129000621-6cc41666eb5a/go.mod h1:Idr9/NmgY4TvXzdFYCByIdHfzwGodfM1/8fjIAsHxE4=
