@@ -54,7 +54,11 @@ func (f *InputFlags) ToLoader() (pw.Loader, error) {
 		return l, err
 	}
 
-	return f.LastPassInputFlags.ToLoader()
+	if l, err := f.LastPassInputFlags.ToLoader(); !IsNoCompatibleLoaderError(err) {
+		return l, err
+	}
+
+	return nil, NoCompatibleLoaderError{AllowedSources: f.AllowedSources()}
 }
 
 func (f *InputFlags) AllowedSources() []string {
