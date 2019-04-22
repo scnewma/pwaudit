@@ -46,3 +46,7 @@ Other Options:
 
   -v,--version              Print the version.
 ```
+
+## Prior Art
+
+This is a more generialized CLI than the [lpass-auditor](https://github.com/scnewma/lpass-auditor).
